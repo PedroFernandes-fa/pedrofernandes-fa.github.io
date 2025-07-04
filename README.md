@@ -1,4 +1,4 @@
-# Pedro Fernandes - Personal Portfolio
+# [Pedro Fernandes - Personal Portfolio](pedrofernandes-fa.github.io)
 This is the personal portfolio website of Pedro Fernandes, an indie game developer and Computer Science student.
 This site showcases his personal projects, prototypes, and development journey.
 
