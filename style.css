@@ -1,0 +1,89 @@
+:root {
+    --cor-fundo:       #1E1E1E;
+    --cor-card:        #121212;
+    --cor-texto:       #E0E0E0;
+    --cor-destaque:    #00A878;
+    --cor-texto-botao: #FFFFFF;
+    --cor-shadow:      rgba(0, 0, 0, 0.5);
+}
+
+header{
+    background-color: var(--cor-card);
+    width:            90%;
+    max-width:        900px;
+    padding:          30px;
+    margin:           20px 0;
+    border-radius:    15px;
+    box-shadow:       0 4px 15px var(--cor-shadow);
+    display:          flex;
+    flex-direction:   row;
+    align-items:      center;
+    justify-content:  center;
+    gap:              25px;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color:            var(--cor-texto);
+    display:          flex;
+    flex-direction:   column;
+    align-items:      center;
+    text-align:       center;
+    margin:           0;
+    font-family:      'Poppins', sans-serif;
+}
+
+footer {
+    background-color: var(--cor-card);
+    width:            90%;
+    max-width:        900px;
+    padding:          30px;
+    margin:           20px 0;
+    border-radius:    15px;
+    box-shadow:       0 4px 15px var(--cor-shadow);
+}
+
+h1, h3, h4 {
+    font-weight: 700; 
+}
+
+.foto-perfil {
+    width:         120px;
+    height:        120px;
+    border-radius: 50%;
+    border:        3px solid var(--cor-destaque);
+    margin-bottom: 15px;
+}
+
+.info-header {
+    text-align: left;
+}
+
+.conteudo-principal {
+    max-width:   1200px;
+    line-height: 1;
+}
+
+.container-botoes {
+    display:        flex;
+    flex-direction: column;
+    gap:            2px;
+    align-items:    center;
+    margin:         20px 0;
+}
+
+.botao-link {
+    background-color: var(--cor-destaque);
+    color:            var(--cor-texto-botao);
+    text-decoration:  none;
+    padding:          8px 15px;
+    border-radius:    8px;
+    margin:           4px;
+    box-shadow:       0 4px 15px var(--cor-shadow);
+    transition:       transform 0.2s ease-in-out;
+}
+
+.botao-link:hover {
+    transform: scale(1.2);
+    filter:    brightness(1.2);
+}
