@@ -1,48 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8"/>
         <title>Pedro Fernandes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link                  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css" />
-
+        <link rel= "preconnect" href="https://fonts.googleapis.com">
+        <link rel= "preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link rel= "stylesheet" href="style.css"/>
     </head>
-
     <body>
-        <header>
-            <img src="foto.jpeg" alt="Foto de Pedro Fernandes" class="foto-perfil">
-
-            <div class="info-header">
-                <h1>🎮 Pedro Fernandes</h1>
-                <h3>👨‍💻 Game developer & Computer Science student</h3>
+        <nav class="sidebar">
+            <div class="language-selector">
+                <button class="language-menu-button" data-lang="language"> Idioma </button>
+                <div    class="language-options">
+                    <a href="#" onclick="changeLanguage('pt')"> Português </a>
+                    <a href="#" onclick="changeLanguage('en')"> English   </a>
+                    <a href="#" onclick="changeLanguage('es')"> Español   </a>
+                </div>
             </div>
-        </header>
-        
-        <p class="conteudo-principal">Hi! I'm Pedro, an indie developer passionate about creative game mechanics, roguelikes, and experimental systems.</p>
-        <p class="conteudo-principal">I'm currently studying Computer Science at UFPB (Universidade Federal da Paraíba) and I enjoy bringing my ideas to life through games.</p>
-        <p class="conteudo-principal">Here you'll find my personal projects, prototypes, and updates as I grow as a developer. Feedback is always welcome!</p>
+            <ul>
+                <li> <a href="#apresentacao" data-lang="nav_home">      Apresentação </a> </li>
+                <li> <a href="#linguagens"   data-lang="nav_languages"> Linguagens   </a> </li>
+                <li> <a href="#projetos"     data-lang="nav_projects">  Projetos     </a> </li>
+                <li> <a href="#contato"      data-lang="nav_contact">   Contato      </a> </li>
+            </ul>
+        </nav>
 
-        <div class="container-botoes">
-            <h4>Social Media:</h4>
-            <a href="https://www.instagram.com/pedro_fih/"                                   class="botao-link">Instagram</a>
-            <a href="https://github.com/PedroFernandes-fa"                                   class="botao-link">Github</a>
-            <a href="https://www.linkedin.com/in/pedro-fernandes-de-araújo-filho-22b54a2b1/" class="botao-link">LinkedIn</a>
-            <a href="https://pedrofernandes-fa.itch.io"                                      class="botao-link">Itch.io</a>
-        </div>
+        <main class="content">
+            <section id=   "apresentacao"           class="section-container" >
+                <img src=  "images\terno.jpg" alt=  "Foto de Pedro Fernandes de terno" class="profile-pic-terno" >
+                <div class="section-text" >
+                    <h1 data-lang="home_title" >         Pedro Fernandes                                                                                                                           </h1>
+                    <p  data-lang="home_description_1" > Olá! Sou Pedro, um desenvolvedor indie apaixonado por mecânicas de jogos criativas, roguelikes e sistemas experimentais.                  </p>
+                    <p  data-lang="home_description_2" > Atualmente, estudo Ciência da Computação na UFPB (Universidade Federal da Paraíba) e gosto de dar vida às minhas ideias através de jogos. </p>
+                </div>
+            </section>
 
-        <div class="container-botoes">
-            <h4>Games:</h4>
-            <a href="https://pedrofernandes-fa.itch.io/rogeo" class="botao-link">Rogeo</a>
-        </div>
+            <section id=   "linguagens" class="section-container reverse">
+                <div class="section-text">
+                    <h2 data-lang="languages_title">       Linguagens e Tecnologias                                                                                                                                                                                    </h2>
+                    <p  data-lang="languages_description"> Tenho experiência com diversas tecnologias de desenvolvimento, incluindo Python, JS, CSS, HTML, Java, etc e estou constantemente aprendendo novas ferramentas para expandir meu arsenal de desenvolvimento. </p>
+                </div>
+                <img src="images\codigo.png" alt="Imagem de um código de programação" class="section-image">
+            </section>
 
-        
-        <footer>
-            <h4>📍 From Brazil | Studying at UFPB</h4>
-            <p>Email: pedro.fernandes@dcx.ufpb.br</p>
-            <p>Copyright 2025. Todos os direitos reservados.</p>
-        </footer>
+            <section id=       "projetos">
+                <h2  data-lang="projects_title"> Meus Projetos </h2>
+                <div             class= "carousel"           >
+                    <div         class= "carousel-container" >
+                        <div     class= "carousel-item"      style= "background-image: url('images/rogeo.png');" >
+                            <div class= "project-info"       >
+                                <h3 data-lang= "project1_title"       > Rogeo                                                                                           </h3>
+                                <p  data-lang= "project1_description" > Um jogo de aventura e exploração de masmorras com elementos de roguelike.                       </p>
+                                <a  href=      "https://pedrofernandes-fa.itch.io/rogeo" target="_blank" class="project-button" data-lang="project_button"> Ver Projeto </a>
+                            </div>
+                        </div>
+                        </div>
+                    <button class="carousel-control prev" onclick="moveCarousel(-1)" > &#10094; </button>
+                    <button class="carousel-control next" onclick="moveCarousel(1)"  > &#10095; </button>
+                </div>
+            </section>
+
+            <section id=    "contato"   class="section-container" >
+                <img src=   "" alt=  "" class="section-image"     >
+                <div class= "social-links"                        >
+                    <h1 data-lang="contact_title"> Entre em Contato </h1>
+                    <a  href="https://www.instagram.com/pedro_fih/"                                        target="_blank" class="social-button"> <img src="images\instagram_logo.png" alt="Logo Instagram" > Instagram </a>
+                    <a  href="https://github.com/PedroFernandes-fa"                                        target="_blank" class="social-button"> <img src="images\github_logo.png"    alt="Logo Github"    > Github    </a>
+                    <a  href="https://www.linkedin.com/in/pedro-fernandes-de-ara%C3%BAjo-filho-22b54a2b1/" target="_blank" class="social-button"> <img src="images\linnkedin_logo.png" alt="Logo LinkedIn"  > LinkedIn  </a>
+                    <a  href="https://pedrofernandes-fa.itch.io"                                           target="_blank" class="social-button"> <img src="images\itchio_logo.png"    alt="Logo Itch.io"   > Itch.io   </a>
+                </div>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
     </body>
 </html>
